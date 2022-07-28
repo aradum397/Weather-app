@@ -1,7 +1,7 @@
 const request = require('postman-request')
 
 const forecast = (latitude, longitude) => {
-	const url = `http://api.weatherstack.com/current?access_key=d0f52eb74a3b530fca293a67fb14b952&query=${longitude},${latitude}`
+	const url = `http://api.weatherstack.com/current?access_key={access_key}&query=${longitude},${latitude}`
 	request({ url, json: true }, (err, { body }) => {
 		if (err) {
 			return console.log('Unable to retreive weather data!')
